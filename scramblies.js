@@ -7,13 +7,8 @@ function scramble(str1, str2) {
       matchingLetters.push(stringOne[i]);
     }
   }
-  let numberToCompare = matchingLetters.length;
-  for (let i = 0; i < matchingLetters.length; i++) {
-    if (matchingLetters.includes(matchingLetters[i])) {
-      numberToCompare -= 0.5;
-    }
-  }
-  if (Math.floor(numberToCompare) >= str2.length) {
+
+  if (matchingLetters.length >= str2.length) {
     return true;
   } else {
     return false;
