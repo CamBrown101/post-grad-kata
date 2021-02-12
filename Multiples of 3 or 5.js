@@ -13,5 +13,3 @@ const solution = (num) => {
   }
   return ansArray;
 };
-
-console.log(solution(10));

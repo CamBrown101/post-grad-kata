@@ -1,14 +1,11 @@
-const twoSum = (nums, target) => {
-  let ans = [];
-  nums.forEach((outterNumber, outterIndex) => {
-    nums.forEach((innerNumber, innerIndex) => {
-      if (innerIndex !== outterIndex && outterNumber + innerNumber === target) {
-        ans = [outterIndex, innerIndex];
-        return;
+const twoSum = (numbers, target) => {
+  for (let i = 0; i < numbers.length - 1; i++) {
+    for (let j = 1; j < numbers.length; j++) {
+      if (numbers[i] + numbers[j] === target) {
+        return [i, j];
       }
-    });
-  });
-  return ans;
+    }
+  }
 };
 
-console.log(twoSum([3, 2, 4], 6));
+console.log(twoSum([1, 2, 3, 4, 5], 9));
