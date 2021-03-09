@@ -10,7 +10,12 @@ function stockList(listOfArt, listOfCat) {
       }
     }
   }
-  return ans;
+  //Format answer
+  let formattedAns = '';
+  for (let key in ans) {
+    formattedAns += `(${key} : ${ans[key]}) - `;
+  }
+  return formattedAns.slice(0, -3);
 }
 
 b = ['ABAR 200', 'CDXE 500', 'BKWR 250', 'BTSQ 890', 'DRTY 600'];
