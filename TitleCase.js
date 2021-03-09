@@ -10,10 +10,8 @@ function titleCase(title, minorWords) {
     if (title.length > 0 && title !== '') {
       wordsArray[i] = wordsArray[i].toLowerCase();
       firstLetters[i] = wordsArray[i][0].toUpperCase();
-      if (!wordsArray[0]) {
-        if (
-          minorWordsArray.toLowerCase().includes(wordsArray[i].toLowerCase())
-        ) {
+      if (wordsArray.length > 0) {
+        if (i > 0 && minorWordsArray.includes(wordsArray[i])) {
           formattedWords += wordsArray[i] + ' ';
         } else {
           formattedWords += firstLetters[i] + wordsArray[i].slice(1, 20) + ' ';
@@ -26,11 +24,10 @@ function titleCase(title, minorWords) {
   return formattedWords === '' ? formattedWords : formattedWords.trim();
 }
 
-console.log(titleCase('a clash of KINGS', 'a an the of'));
-console.log(titleCase(''), '');
+// console.log(titleCase(''), '');
 console.log(titleCase('a clash of KINGS', 'a an the of'), 'A Clash of Kings');
-console.log(
-  titleCase('THE WIND IN THE WILLOWS', 'The In'),
-  'The Wind in the Willows'
-);
-console.log(titleCase('the quick brown fox'), 'The Quick Brown Fox');
+// console.log(
+//   titleCase('THE WIND IN THE WILLOWS', 'The In'),
+//   'The Wind in the Willows'
+// );
+// console.log(titleCase('the quick brown fox'), 'The Quick Brown Fox');
