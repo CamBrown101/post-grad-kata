@@ -6,7 +6,6 @@ function stockList(listOfArt, listOfCat) {
   let ans = {};
   for (let letter of listOfCat) {
     ans[letter] = 0;
-    console.log(ans);
   }
   for (codes of listOfArt) {
     let firstLetter = codes[0];
