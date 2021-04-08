@@ -1,4 +1,7 @@
 def mango(quantity, price):
-    threes = quantity / 3
-    ans = (threes * 2 * price) + ((quantity % 3) * price)
-    return ans
+    free = quantity // 3
+    remainder = quantity - free
+    return remainder * price
+
+
+print(mango(9, 5))
